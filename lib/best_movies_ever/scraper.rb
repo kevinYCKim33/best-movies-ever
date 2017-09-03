@@ -1,0 +1,4 @@
+class BestMoviesEver::Scraper
+
+
+end
