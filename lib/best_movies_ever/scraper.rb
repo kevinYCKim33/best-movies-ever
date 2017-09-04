@@ -22,26 +22,32 @@ class BestMoviesEver::Scraper
       movies << movie_hash
     end
     movies
-    binding.pry
   end
 
   def self.scrape_movie_page(movie_url)
     movie_page = Nokogiri::HTML(open(movie_url))
-
+    # binding.pry
+    addl_info = {
+      critics_consensus: movie_page.css("p.critic_consensus").first.text.slice(68,1000), #hack method
+      audience_score: movie_page.css("div.meter-value").text.strip,
+      movie_info: movie_page.css("div#movieSynopsis").text.strip
+    }
+    addl_info
+    binding.pry
   end
 end
 
 BestMoviesEver::Scraper.scrape_index_page("https://www.rottentomatoes.com/top/bestofrt/") # My testing environment
-# index_page.css("a.unstyled.articleLink").text onto something with this.
-# index_page.css("table.table td a.unstyled.articleLink").text getting warmer
+BestMoviesEver::Scraper.scrape_movie_page("https://www.rottentomatoes.com/m/1000626_all_about_eve")
 
-# first_film = index_page.css("table.table tr")[1] # getting warmer, must start from 1, as 0 is for the titles
-# rank = first_film.css("td.bold").text
-# rating = first_film.css("td span.tMeterScore").text.strip #=> _99%  not happy about the space but just move on
-# title = first_film.css("td a").text.strip #=> "The Wizard of Oz (1939)"
-# num_of_reviews = first_film.css("td.right").text #=> "110"
 
 
 # movies = [{rank: "1", rating: "99%" title: "The Wizard of Oz (1939)", num_of_reviews: "110"},
 #   {rank: "2", rating: "100%" title: "Citizen Kane (1941)", num_of_reviews: "75"},
 #   {rank: "3", rating: "100%" title: "The Third Man (1949)", num_of_reviews: "77"}]
+
+# a_movie = {
+#   critics_consensus: "Smart, sophisticated, and devastatingly funny, All About Eve is a Hollywood classic that only improves with age.",
+#   audience_score: "94%",
+#   movie_info: "Base"Fasten your seat belts. It's going to be a bumpy night." All About Eve received 6 Academy Awards, including Best Picture. ~ Hal Erickson, Rovi"
+# }
