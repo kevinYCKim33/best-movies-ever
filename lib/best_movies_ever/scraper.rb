@@ -14,7 +14,7 @@ class BestMoviesEver::Scraper
     index_page.css("table.table tr").drop(1).each do |movie|
       movie_hash = {
         rank: movie.css("td.bold").text,
-        rating: movie.css("td span.tMeterScore").text.slice(1,5),
+        rating: movie.css("td span.tMeterScore").text.slice(1,5), #hack method
         title: movie.css("td a").text.strip,
         num_ofreviews: movie.css("td.right").text,
         url: "https://rottentomatoes.com" + movie.css("td a").attribute("href").value
@@ -26,14 +26,12 @@ class BestMoviesEver::Scraper
 
   def self.scrape_movie_page(movie_url)
     movie_page = Nokogiri::HTML(open(movie_url))
-    # binding.pry
     addl_info = {
       critics_consensus: movie_page.css("p.critic_consensus").first.text.slice(68,1000), #hack method
       audience_score: movie_page.css("div.meter-value").text.strip,
-      movie_info: movie_page.css("div#movieSynopsis").text.strip
+      synopsis: movie_page.css("div#movieSynopsis").text.strip
     }
     addl_info
-    binding.pry
   end
 end
 
