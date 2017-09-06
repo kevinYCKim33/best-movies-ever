@@ -1,11 +1,3 @@
-# My testing modules just for the Scraper
-# module BestMoviesEver
-# end
-# require 'pry'
-# require 'nokogiri'
-# require 'open-uri'
-# ^^ My testing modules just for the Scraper
-
 class BestMoviesEver::Movie
   attr_accessor :rank, :rating, :title, :num_of_reviews, :url, :critics_consensus, :audience_score, :synopsis
 
@@ -34,33 +26,3 @@ class BestMoviesEver::Movie
     @@all[rank - 1]
   end
 end
-
-# wiz_hash = {
-#   rank: "1",
-#   rating: "99%",
-#   title: "The Wizard of Oz (1939)",
-#   num_of_reviews: "110",
-#   url: "https://www.rottentomatoes.com/m/the_wizard_of_oz_1939"
-# }
-
-# movies_array = [
-#   {rank: "1", rating: "99%", title: "The Wizard of Oz (1939)", url: "https://www.rottentomatoes.com/m/the_wizard_of_oz_1939"},
-#   {rank: "2", rating: "100%", title: "Citizen Kane (1941)", url: "https://www.rottentomatoes.com/m/citizen_kane"},
-#   {rank: "3", rating: "100%", title: "The Third Man (1949)", url: "https://www.rottentomatoes.com/m/the_third_man"}
-# ]
-#
-# addl_info = {
-#   critics_consensus: "it's good",
-#   audience_score: "100%",
-#   synopsis: "4 characters go somewhere."
-# }
-#
-# # wiz = BestMoviesEver::Movie.new(wiz_hash)
-# movies = BestMoviesEver::Movie.create_from_collection(movies_array)
-# binding.pry
-
-
-
-# movies_array = [{rank: "1", rating: "99%" title: "The Wizard of Oz (1939)", num_of_reviews: "110", url: "www.adsjldalsk"},
-#   {rank: "2", rating: "100%" title: "Citizen Kane (1941)", num_of_reviews: "75", url: "www.adsjklafdl"},
-#   {rank: "3", rating: "100%" title: "The Third Man (1949)", num_of_reviews: "77"}]
