@@ -35,7 +35,7 @@ class BestMoviesEver::CLI
     puts "#{movie.synopsis}"
     puts ""
     puts "Would you like to see the list again? Y/N"
-    input2 = gets.strip
+    input2 = gets.strip.upcase
     if input2 == "Y"
       start
     else

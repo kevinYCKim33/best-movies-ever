@@ -7,7 +7,6 @@ class BestMoviesEver::Scraper
         rank: movie.css("td.bold").text,
         rating: movie.css("td span.tMeterScore").text.slice(1,5),
         title: movie.css("td a").text.strip,
-        num_of_reviews: movie.css("td.right").text,
         url: "https://rottentomatoes.com" + movie.css("td a").attribute("href").value
       }
       movies << movie_hash

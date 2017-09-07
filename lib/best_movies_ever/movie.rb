@@ -1,5 +1,5 @@
 class BestMoviesEver::Movie
-  attr_accessor :rank, :rating, :title, :num_of_reviews, :url, :critics_consensus, :audience_score, :synopsis
+  attr_accessor :rank, :rating, :title, :url, :critics_consensus, :audience_score, :synopsis
 
   @@all = []
 
