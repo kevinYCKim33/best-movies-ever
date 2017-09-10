@@ -1,28 +1,28 @@
 # BestMoviesEver
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/best_movies_ever`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem will list 100 best films of all time according to Rotten Tomatoes.  
+Users can find out more about a specific movie by typing the Rotten Tomatoes' ranking. 
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'best_movies_ever'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install best_movies_ever
+    $ gem install best-movies-ever-cli-gem
 
 ## Usage
 
-For now: run ./bin/worlds-best-restaurants from main file
+    For local version: check into the best-movies-ever-cli-gem directory,
+    then run:
+      bin/best-movies-ever
+
+    and then follow the on-screen prompts.
+
+    For rubygems.org version, run:
+
+    $ best-movies-ever
+
+    and then follow the on-screen prompts.
+
+
+
 
 ## Development
 
