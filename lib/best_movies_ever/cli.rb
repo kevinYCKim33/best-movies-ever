@@ -40,7 +40,7 @@ class BestMoviesEver::CLI
       start
     else
       puts ""
-      puts "Okay, go watch some of these on a plane ride sometime!"
+      puts "Okay, come back again soon!"
     end
   end
 
