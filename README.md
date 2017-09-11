@@ -1,7 +1,7 @@
 # BestMoviesEver
 
 This gem will list 100 best films of all time according to Rotten Tomatoes.  
-Users can find out more about a specific movie by typing the Rotten Tomatoes' ranking. 
+Users can find out more about a specific movie by typing the Rotten Tomatoes' ranking.
 
 ## Installation
 
@@ -20,9 +20,6 @@ Users can find out more about a specific movie by typing the Rotten Tomatoes' ra
     $ best-movies-ever
 
     and then follow the on-screen prompts.
-
-
-
 
 ## Development
 
