@@ -1,15 +1,16 @@
 class BestMoviesEver::CLI
   def call
     puts "Come see Rotten Tomatoes' list of 100 best films ever!"
-    movies = BestMoviesEver::Scraper.scrape_index_page("https://www.rottentomatoes.com/top/bestofrt/")
-    movies_objs = BestMoviesEver::Movie.create_from_collection(movies)
+    BestMoviesEver::Scraper.scrape_index_page("https://www.rottentomatoes.com/top/bestofrt/")
+    binding.pry
+    #movies_objs = BestMoviesEver::Movie.create_from_collection(movies)
     start
   end
 
   def start
       puts ""
     BestMoviesEver::Movie.all.each do |movie|
-      puts "#{movie.rank} #{movie.title}"
+      puts "#{movie.rank} #{movie.title} movie_year #{movie.year}"
     end
     puts "---------------------------------------------"
     input = nil

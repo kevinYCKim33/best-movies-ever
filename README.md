@@ -1,7 +1,10 @@
 # BestMoviesEver
 
-This gem will list 100 best films of all time according to Rotten Tomatoes.  
+This [published](https://rubygems.org/gems/best-movies-ever-cli-gem/versions/0.1.0) gem will list 100 best films of all time according to Rotten Tomatoes.  
 Users can find out more about a specific movie by typing the Rotten Tomatoes' ranking.
+
+![index_page](index_page.png)
+![show_page](show_page.png)
 
 ## Installation
 
@@ -29,7 +32,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/<github username>/best_movies_ever. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/kevinYCKim33/best_movies_ever. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
