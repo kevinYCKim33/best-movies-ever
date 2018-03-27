@@ -4,6 +4,7 @@ This [published](https://rubygems.org/gems/best-movies-ever-cli-gem/versions/0.1
 Users can find out more about a specific movie by typing the Rotten Tomatoes' ranking.
 
 ![index_page](index_page.png)
+
 ![show_page](show_page.png)
 
 ## Installation
